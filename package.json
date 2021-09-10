@@ -1,0 +1,13 @@
+{
+  "name": "desafio-kukac",
+  "version": "1.0.0",
+  "description": "Desafio para o processo seletivo de estágio na kukac",
+  "main": "index.js",
+  "author": "Joel Vítor Torres",
+  "license": "MIT",
+  "scripts": {
+    "install": "cd ./client && npm install && cd ../server && npm install && cd ..",
+    "server": "cd ./server && npm run build && npm start && cd ..",
+    "client": "cd ./client && npm run dev"
+  }
+}
