@@ -6,7 +6,6 @@
 - [Design](#design)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Como rodar o projeto](#como-rodar-o-projeto)
-- [Alterar portas](#alterar-portas)
 
 ## Ideia
 
@@ -57,17 +56,3 @@ Para iniciar o server:
 Para iniciar o client:
 
 > npm run client
-
-## Alterar portas
-
-Se for necessário, você pode alterar as portas que o projeto utilizará.
-
-Pra fazer isso, primeiramente modifique as portas padrão no arquivo `.env` localizado na raiz do projeto
-
-Depois, inicie o servidor normalmente.
-
-Para iniciar o client, será necessário fazer isso manualmente:
-
-> cd client && yarn dev --port 5000
-
-Substitua `5000` pela mesma porta pro cliente definida no arquivo `.env`
