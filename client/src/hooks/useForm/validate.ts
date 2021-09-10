@@ -1,11 +1,11 @@
-interface ErrorsTypes {
+export interface ErrorsTypes {
   name?: string;
   cep: string;
   income: string;
   dependents: string;
 }
 
-export default function validateData(values) {
+export function validateData(values) {
   let errors: ErrorsTypes = {
     name: "",
     cep: "",

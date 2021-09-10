@@ -1,5 +1,8 @@
 import type { NextPage } from 'next'
 import useForm from '../hooks/useForm'
+import { TextField } from '../components/TextField';
+import Head from "next/head";
+
 
 const Home: NextPage = () => {
 
@@ -7,7 +10,17 @@ const Home: NextPage = () => {
 
   return (
     <div>
+
+      <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+      </Head>
+
+
       <form onSubmit={handleSubmit}>
+        <TextField type="text" name="cep" placeholder="99999-999" isRequired={true} value={values.cep} errors={errors} label="CEP" onChange={handleInput} />
         <label htmlFor="cep">CEP
           <input type="text" name="cep" id="cep" placeholder="CEP" value={values.cep} required onChange={handleInput} />
           {errors.cep && <p>{errors.cep}</p>}

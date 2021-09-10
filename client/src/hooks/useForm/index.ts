@@ -1,5 +1,5 @@
 import { useState } from "react";
-import validateData from "./validate";
+import { validateData } from "./validate";
 import { mask } from "remask";
 import axios from "axios";
 
