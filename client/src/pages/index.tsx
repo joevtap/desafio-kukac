@@ -1,17 +1,14 @@
 import type { NextPage } from 'next'
 import { Form } from '../components/Form';
 import { FormLeft } from '../components/FormLeft'
+import styles from '../styles/pages/Home.module.css'
 
 import Head from "next/head";
 
-
-
 const Home: NextPage = () => {
 
-
-
   return (
-    <div>
+    <div className={styles.app}>
 
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,9 +19,7 @@ const Home: NextPage = () => {
 
       <Form>
         <FormLeft />
-        <div>
-          <img src="art.jpg" alt="art" />
-        </div>
+        <div />
       </Form>
 
     </div >

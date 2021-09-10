@@ -32,6 +32,16 @@ const useForm = () => {
     dependents: "",
   });
 
+  const [data, setData] = useState({
+    name: "",
+    perCapitaIncome: "",
+    street: "",
+    details: "",
+    neighborhood: "",
+    city: "",
+    fu: "",
+  });
+
   const handleInput = (event) => {
     const { name, value } = event.target;
 
@@ -62,8 +72,7 @@ const useForm = () => {
           setErrors({ ...errors, cep: "CEP inexistente!" });
         } else {
           resetValues();
-
-          window.alert(JSON.stringify(req.data));
+          window.alert("Retorno da API: " + JSON.stringify(req.data, null, 4));
         }
       } catch (error) {
         console.error(error);
@@ -86,6 +95,7 @@ const useForm = () => {
     handleInput,
     handleSubmit,
     resetValues,
+    data,
   };
 };
 

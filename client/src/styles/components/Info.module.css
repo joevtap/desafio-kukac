@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: var(--primary);
+  border-radius: 16px;
+  padding: 12px 24px 12px 16px;
+
+  color: var(--bg-2);
+
+  margin: 32px 0;
+
+  transition: 300ms;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 40px -20px rgba(124, 182, 255, 0.24);
+}
+
+.container img {
+  margin-right: 16px;
+}
+
+.container p {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--bg-2);
+}

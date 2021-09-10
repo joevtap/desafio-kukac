@@ -23,7 +23,7 @@ export const processData = async (data: DataTypes) => {
       uf: fu,
     } = viacepData;
 
-    const perCapitaIncome = income / dependents;
+    const perCapitaIncome = (income / dependents).toFixed(2);
 
     const response = {
       name,

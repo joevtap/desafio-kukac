@@ -3,6 +3,8 @@
   align-items: center;
   justify-content: center;
 
+  margin-top: 32px;
+
   background: var(--primary-gradient);
   width: 100%;
   height: 56px;
