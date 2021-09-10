@@ -9,7 +9,7 @@ interface TextFieldProps {
   isRequired: boolean;
   onChange: (event: any) => void;
   errors: ErrorsTypes;
-  value: string;
+  value: string | number;
 }
 
 export const TextField = ({ type, name, placeholder, label, isRequired, onChange, errors, value }: TextFieldProps) => {

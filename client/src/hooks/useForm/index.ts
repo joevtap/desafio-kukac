@@ -6,8 +6,8 @@ import axios from "axios";
 interface APIRequestTypes {
   name?: string;
   cep: string;
-  income: number;
-  dependents: number;
+  income: string;
+  dependents: string;
 }
 
 interface ErrorsTypes {
@@ -21,8 +21,8 @@ const useForm = () => {
   const [values, setValues] = useState<APIRequestTypes>({
     name: "",
     cep: "",
-    income: 0,
-    dependents: 1,
+    income: "",
+    dependents: "",
   });
 
   const [errors, setErrors] = useState<ErrorsTypes>({
@@ -59,8 +59,10 @@ const useForm = () => {
         const req = await axios.post("http://localhost:3001/api", values);
 
         if (req.data.erro) {
-          setErrors({ ...errors, cep: "CEP Invalido!" });
+          setErrors({ ...errors, cep: "CEP inexistente!" });
         } else {
+          resetValues();
+
           window.alert(JSON.stringify(req.data));
         }
       } catch (error) {
@@ -69,11 +71,21 @@ const useForm = () => {
     }
   };
 
+  const resetValues = () => {
+    setValues({
+      name: "",
+      cep: "",
+      income: "",
+      dependents: "",
+    });
+  };
+
   return {
     values,
     errors,
     handleInput,
     handleSubmit,
+    resetValues,
   };
 };
 
